@@ -91,12 +91,13 @@ nav {
     font-weight: 900;
 }
 
+.name {
+    color: var(--quaternary)
+}
+
 .heart {
     height: 3.5rem;
     filter: invert(24%) sepia(19%) saturate(7469%) hue-rotate(322deg) brightness(97%) contrast(93%);
-}
-
-.heart:hover {
     color: var(--primary);
     animation: pulse 1.5s infinite;
 }
@@ -120,7 +121,7 @@ nav {
     }
 
     70% {
-        transform: scale(1.);
+        transform: scale(1);
     }
 }
 
@@ -145,11 +146,23 @@ nav {
     background-position: 0%;
 }
 
-/* recent blog posts */
-.recent-posts {
-    margin: 5rem 0;
-    padding: 2rem 5rem;
+.reveal {
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
 }
+
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+/* recent blog posts */
+.experience {
+    margin: 5rem 0;
+    padding: 2rem 5rem; 
+}
+
 
 .posts-nav {
     display: flex;
@@ -161,7 +174,7 @@ nav {
     font-weight: 900;
 }
 
-.post-title{
+.work-title{
     font-size: 2.5rem;
 }
 
@@ -174,60 +187,94 @@ nav {
     color: var(--primary);
 }
 
-.blog-card-container {
+.work-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     grid-gap: 3rem;
 }
 
-.blog-card {
-    padding: 1rem;
+.work-cards-title {
+    grid-column: span 3;
+    text-align: center;
+    font-size: 3rem;
+    color: var(--secondary);
+}
+
+.work-timeline {
+    display: flex;
+}
+
+.exp-icon {
+    width: 10rem;
+    padding: 5rem;
+}
+
+.work-timeline:nth-child(odd) .exp-icon{
+    filter: invert(24%) sepia(19%) saturate(7469%) hue-rotate(322deg) brightness(97%) contrast(93%);
+}
+
+.work-timeline:nth-child(even) .exp-icon{
+    filter: invert(42%) sepia(85%) saturate(365%) hue-rotate(103deg) brightness(91%) contrast(90%);
+}
+
+.work-timeline:nth-child(odd) .timeline-icon:after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 250px;
+    background-color: var(--primary);
+    top: 45%;
+    left: 18.5%;
+}
+
+.work-card {
+    padding: 1rem 3rem;
     border: 2px solid black;
     box-shadow: 10px 5px black;
     transition: all 0.5s;
 }
 
-.blog-card:hover {
+.work-card:hover {
     transform: scale(1.05);
 }
 
-.blog-card:nth-child(1) {
+.work-timeline:nth-child(odd) .work-card {
     border-top: 5px solid var(--primary);
 }
 
-.blog-card:nth-child(1) .post-title:hover {
+.work-timeline:nth-child(odd) .work-title:hover {
     color: var(--primary);
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
-.blog-card .post-date {
+.work-card .post-date {
     padding-right: 1rem;
     text-transform: capitalize;
     font-weight: 700;
 }
 
-.blog-card:nth-child(1) .post-tags {
+.work-timeline:nth-child(odd) .post-tags {
     padding-left: 1rem;
     text-transform: capitalize;
     color: var(--primary);
     border-left: 3px solid var(--primary);
 }
 
-.blog-card:nth-child(2) {
+.work-timeline:nth-child(even) .work-card {
     border-top: 5px solid var(--secondary);
 }
 
-.blog-card:nth-child(2) .post-title:hover {
+.work-timeline:nth-child(even) .work-title:hover {
     color: var(--secondary);
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
-.blog-card:nth-child(2) .post-tags {
+.work-timeline:nth-child(even) .post-tags {
     padding-left: 1rem;
     text-transform: capitalize;
     color: var(--secondary);
     border-left: 3px solid var(--secondary);
 }
+
 
 .projects {
     margin: 2rem 0 7rem;
@@ -255,26 +302,26 @@ nav {
 }
 
 .project-card.one{
-    background-image: url(../img/project-1.jpg);
+    background-image: url(../img/recodrone.PNG);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 .project-card.two{
-    background-image: url(../img/project-2.jpg);
+    background-image: url(../img/orchid.PNG);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 .project-card.three{
-    background-image: url(../img/project-3.jpg);
+    background-image: url(../img/oubliette.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .project-card.four{
-    background-image: url(../img/project-4.jpg);
+    background-image: url(../img/yalapay.PNG);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -355,6 +402,7 @@ nav {
 .readmore-btn:hover{
     background-color: var(--quaternary);
     color: #fff;
+    cursor: pointer;
 }
 
 footer{
@@ -544,7 +592,7 @@ footer p{
         font-size: 1.2rem;
     }
 
-    .post-title{
+    .work-title{
         font-size: 2rem;
     }
 

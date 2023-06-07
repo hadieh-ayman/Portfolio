@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-    <link rel="manifest" href="img/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Share+Tech+Mono&display=swap" rel="stylesheet">
@@ -16,11 +16,11 @@
   </head>
   <body>
     <nav>
-      <img src="img/logo.png" alt="" class="nav-logo" />
+      <a href="home.html"><img src="assets/img/logo.png" alt="" class="nav-logo" /></a>
       <ul class="navbar">
-        <li><a href="#projects">works</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="ham-btn">
           <div class="hamburger"></div>
@@ -29,92 +29,99 @@
     <main>
       <header class="header">
         <div class="about-me-container">
-          <h1 class="about-me-title">Hi. I'm Hadieh, <br> I <img class="heart" src="img/heart-solid.svg"></img> developing games & websites.</h1>
+          <h1 class="about-me-title">Hi. I'm <span class=name>Hadieh</span>, <br> I <img class="heart" src="assets/img/heart-solid.svg"></img> developing games & websites.</h1>
           <p>
-            Hello, My name is Hadieh Abdulmajeed and I was born in a small town 
-            in Syria, 2001. I am a Computer Science student in her third year. 
-            I made this website for my Web Development lab assignment in one day 
-            and my eyes hurt tbh. It's a good thing I went with a dark theme. My
-            inspiration for this portflio website is my love for pixel art and 
-            retro games.
+            Looking for positions in fullstack web development, mobile app development or game development.
           </p>
-          <button class="resume-btn" type="submit">Download Resume</button>
+          <a href="assets/resume.pdf" target="_blank"><button class="resume-btn" type="submit">Download Resume</button></a>
         </div>
       </header>
-      <section class="recent-posts">
-        <div class="posts-nav">
+      <section class="experience reveal" id="experience">
+        <!-- <div class="posts-nav">
           <h3 class="post-title">Recent posts</h3>
           <a href="blog.html" class="view-link">view all</a>
-        </div>
-        <div class="blog-card-container">
-          <div class="blog-card">
-            <h2 class="post-title">Color Palettes</h2>
+        </div> -->
+        <h2 class="work-cards-title">Education & Experience</h2>
+        <div class="work-container">
+          <div class="work-timeline">
+            <div class="timeline">
+              <div class="timeline-icon">
+                <img src="assets/img/graduation-cap.svg" alt="" class="exp-icon">
+              </div>
+            </div>
+            <div class="work-card">
+            <h2 class="work-title">Bachelor of Computer Science</h2>
             <p class="post-sub">
-              <span class="post-date">January 16, 2022</span><span class="post-tags"> color theory</span>
+              <span class="post-date">Qatar University</span><span class="post-tags">August 2019 - May 2023</span>
             </p>
-            <p class="blog-desc">
-              When it comes to pixel art, it all starts with a good color
-              palette. Creating a custom color palette can be a very satisfying
-              and powerful way to establish your own unique look. I'll guide you
-              through my method as I create a new palette. But first let's go
-              over some basic principals.
+            <p class="work-desc">
+              Accolades: Full Scholarship, Dean’s List for 4 semesters, 3.2/4.0 GPA <br>
+              Electives: Web Development, Mobile Development, Game Development, Cryptography, Machine Learning
             </p>
+            </div>
           </div>
-          <div class="blog-card">
-            <h2 class="post-title">Wind Effects</h2>
+          <div class="work-timeline">
+            <div class="timeline">
+              <div class="timeline-icon">
+                <img src="assets/img/work.svg" alt="" class="exp-icon">
+              </div>
+            </div>
+            <div class="work-card">
+            <h2 class="work-title">FIFA Commentary Assistant</h2>
             <p>
-                <span class="post-date">December 06, 2021</span><span class="post-tags"> animation</span>
+                <span class="post-date">Host Broadcast Services</span><span class="post-tags">November 2022 - December 2022</span>
             </p>
-            <p class="blog-desc">
-              Wind is visually perceived through the movement it imposes on things. 
-              Swirls are a good general solution to illustrate wind in just about 
-              any environment. Even when there is nothing in your composition to 
-              reasonable move around to illustrate wind, swirls can be generated 
-              to imply wind.
+            <p class="work-desc">
+              <li>Set up and install technical and non-technical equipment in the commentary positions.</li>
+              <li>Test the commentary units before the match and adjust them and provide IT support to the commentators.</li>
+              <li>Work with Commentary Control Units ensuring that all commentary feeds are conveyed to the right broadcaster.</li>
             </p>
+            </div>
           </div>
         </div>
       </section>
-      <section class="projects" id="projects">
+      <section class="projects reveal" id="projects">
           <h2 class="project-cards-title">My Projects</h2>
           <div class="project-card one">
               <div class="project-info">
-                <h2 class="project-title">Bank of Metaverse</h2>
-                <p><span class="year">Jan 2022 </span><span class="tools">HTML</span><span class="tools">JS</span></p>
+                <h2 class="project-title">RECODRONE</h2>
+                <p><span class="year">May 2023</span><span class="tools">Flask</span><span class="tools">SQLAlchemy</span><span class="tools">ROS</span></p>
                 <p class="project-desc">
-                  Just like in the real world, anyone who operates within 
-                  the Metaverse could engage in financial transactions. Users 
-                  will likely be able to buy avatars, virtual accessories, 
-                  or even entire environments created by companies or other 
-                  individuals.</p>
-                <button class="readmore-btn">Read More</button>
+                  Developed a portable web application using the Flask framework to communicate with the drone in real-time, 
+                  display telemetry data and send navigation commands.</p>
+                <a href="https://github.com/hadieh-ayman/RecoDroneApplication" target="_blank"><button class="readmore-btn">Read More</button></a>
               </div>
           </div>
           <div class="project-card two">
               <div class="project-info">
-                <h2 class="project-title">OX 2021</h2>
-                <p><span class="year">Dec 2021 </span><span class="tools">HTML</span><span class="tools">CSS</span></p>
-                <p class="project-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis obcaecati odio quasi facere maxime saepe illum fugiat porro itaque nemo?</p>
-                <button class="readmore-btn">Read More</button>
+                <h2 class="project-title">ORCHID</h2>
+                <p><span class="year">August 2022</span><span class="tools">Android</span><span class="tools">Kotlin</span></p>
+                <p class="project-desc">
+                  Used Kotlin language to develop an online shopping application that allows retailers 
+                  to list their products and allow customers to purchase them straight from the retailer.</p>
+                <a href="https://github.com/hadieh-ayman/Orchid" target="_blank"><button class="readmore-btn">Read More</button></a>
               </div>
             </div>
           <div class="project-card three">
               <div class="project-info">
-                <h2 class="project-title">Flower shop in Japan</h2>
-                <p><span class="year">Aug 2021 </span><span class="tools">Unity</span><span class="tools">C#</span></p>
-                <p class="project-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis obcaecati odio quasi facere maxime saepe illum fugiat porro itaque nemo?</p>
-                <button class="readmore-btn">Read More</button>
+                <h2 class="project-title">OUBLIETTE</h2>
+                <p><span class="year">Feb 2022 </span><span class="tools">Unity</span><span class="tools">C#</span></p>
+                <p class="project-desc">A simple 2D game with top down pixel graphics in the roleplaying genre focused on slaying monsters and upgrading weapons. 
+                  Created in unity and written in C#.</p>
+                  <a href="https://github.com/hadieh-ayman/Oubliette" target="_blank"><button class="readmore-btn">Read More</button></a>
               </div>
             </div>
           <div class="project-card four">
               <div class="project-info">
-                <h2 class="project-title">City that never sleeps</h2>
-                <p><span class="year">Jul 2021 </span><span class="tools">Unity</span><span class="tools">C#</span></p>
-                <p class="project-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis obcaecati odio quasi facere maxime saepe illum fugiat porro itaque nemo?</p>
-                <button class="readmore-btn">Read More</button>
+                <h2 class="project-title">YALAPAY</h2>
+                <p><span class="year">Feb 2022</span><span class="tools">NodeJS</span><span class="tools">MongoDB</span></p>
+                <p class="project-desc">Used express.js and node.js web framework to develop a B2B e-commerce website for companies to manage
+                  the payments and invoices for their customers.
+                  </p>
+                  <a href="https://github.com/hadieh-ayman/YalaPay" target="_blank"><button class="readmore-btn">Read More</button></a>
               </div>
             </div>
-          <div class="project-card five">
+          <!-- <div class="project-card five">
               <div class="project-info">
                 <h2 class="project-title">Door to September</h2>
                 <p><span class="year">Sep 2021 </span><span class="tools">Unity</span><span class="tools">C#</span></p>
@@ -129,7 +136,7 @@
                 <p class="project-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis obcaecati odio quasi facere maxime saepe illum fugiat porro itaque nemo?</p>
                 <button class="readmore-btn">Read More</button>
               </div>
-            </div>
+            </div> -->
             
       </section>
     </main>
@@ -138,10 +145,10 @@
         <button class="message-btn">Contact Me!</button>
     </a>
         <ul class="social-links">
-            <li><img src="img/github-brands.svg" alt="" class="social-icon"><a href=""></a></img></li>
-            <li><img src="img/itch-io-brands.svg" alt="" class="social-icon"><a href=""></a></li>
-            <li><img src="img/instagram-brands.svg" alt="" class="social-icon"><a href=""></a></li>
-            <li><img src="img/youtube-brands.svg" alt="" class="social-icon"><a href=""></a></li>
+            <li><img src="assets/img/github-brands.svg" alt="" class="social-icon"><a href="https://github.com/hadieh-ayman"></a></img></li>
+            <li><img src="assets/img/itch-io-brands.svg" alt="" class="social-icon"><a href=""></a></li>
+            <li><img src="assets/img/instagram-brands.svg" alt="" class="social-icon"><a href=""></a></li>
+            <li><img src="assets/img/youtube-brands.svg" alt="" class="social-icon"><a href=""></a></li>
         </ul>
         <p class="copyright">Copyright © Hadieh Abdulmajeed. 2022 All rights reserved.</p>
     </footer>
